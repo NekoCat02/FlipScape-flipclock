@@ -1,0 +1,38 @@
+{
+  "name": "flipscape-pro-desktop",
+  "version": "1.0.0",
+  "description": "A desktop version of the FlipScape Pro clock.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LostOwl",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build":{
+    "appId": "FlipScape",
+    "productName": "FlipScape",
+    "directories":{
+      "output":"MyApp2"
+    },
+    "win":{
+      "target":"nsis",
+      "artifactName": "FlipScape Setup.${ext}",
+      "icon": "icon.png" 
+    },
+    "mac":{
+      "target":"dmg",
+      "artifactName": "FlipScape Setup.${ext}",
+      "icon": "icon.png"
+    },
+    "linux":{
+      "target":"AppImage",
+      "artifactName": "FlipScape Setup.${ext}",
+      "icon": "icon.png"
+    }
+  }
+}
